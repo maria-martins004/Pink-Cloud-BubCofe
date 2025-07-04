@@ -1,0 +1,316 @@
+
+/* Define a cor de fundo principal do site e remove a margem padrão da página. */
+body {
+    background: #FCD8E6;
+    margin: 0;
+}
+
+/* Estilização da nav */
+
+.nav_web {
+    display: flex;
+    justify-content: center;
+    background-color: #FCD8E6;
+    padding: 10px 30px;
+}
+
+/* Estilização da imagem, contendo e limitando-a para um tamanho pequeno */
+.logo {
+    max-width: 100px;
+    max-height: 60px;
+    border-radius: 35px;
+}
+
+/* Estilização dos links presentes na nav */
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+
+.link li {
+    text-align: center;
+    list-style: none;
+    font-family: 'Jockey One';
+}
+
+.link li a {
+    text-decoration: none;
+    color: #A65F3E;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+/* Título e Slogan */
+
+/* Estilização da imagem de fundo - Canva */
+.nuvem_rosa {
+  position: relative;
+  background-image: url('./img_nuvem/nuvem_rosa.png');
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Estilizando a div_web - container dos titulos e slogan */
+.div_web {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Está relacionado a palavra Pink Cloud */
+.h2_pc {
+    font-family: 'Island Moments';
+    font-weight: 200;
+    color: #E64D8D;
+    font-size: 11rem;
+    margin-right: 700px;
+    text-shadow: 5px 0px 25px #BE629C;
+}
+
+/* Está relacionado a palavra (slogan da 'empresa') Uma cafeteria doce como um sonho */
+.slogan {
+    font-family: 'Jockey One';
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #A65F3E;
+    text-shadow: 5px 0px 25px #97773a;
+}
+
+/* Está relacionado a palavra BubCófe */
+.h2_bc {
+    font-family: 'Jacques Francois Shadow';
+    font-weight: 200;
+    color: #BE629C;
+    font-size: 10rem;
+    margin-left: 600px;
+    text-shadow: 5px 0px 25px #E64D8D;
+
+}
+
+/* Animando os Titulos e o Slogan */
+
+/* Começo invisível e fora de posição */
+.h2_pc, .h2_bc, .slogan {
+  opacity: 0;
+  position: relative;
+}
+
+/* Quando recebem o .animar, executam as animações com determinada direção */
+
+/* Pink Cloud -> vindo da esquerda */
+.h2_pc.animar {
+  animation: entrarEsquerda 1s forwards;
+}
+
+/* BubCófe -> vindo da direita */
+.h2_bc.animar {
+  animation: entrarDireita 1s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Slogan -> depois que os dois terminarem */
+.slogan.animar {
+  animation: aparecerSuave 1s forwards;
+  animation-delay: 1.4s;
+}
+
+/* Definem como os elementos vão entrar em cena (movimento + transição de opacidade). */
+
+@keyframes entrarEsquerda {
+  from {
+    left: -150px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes entrarDireita {
+  from {
+    left: 150px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilização - Pequena descrição e breve apresentação geral*/
+
+.receber_cliente {
+    background: #fde9f1;
+    height: 620px;
+    box-shadow: 5px 4px 20px #BE629C;
+}
+
+.receber_cliente h2 {
+    padding-top: 40px;
+    font-family: 'Trebuchet MS';
+    font-size: 2.5rem;
+    color: #A65F3E;
+    text-align: center;
+}
+
+.frase {
+    padding-top: 10px;
+    font-family: 'Jacques Francois Shadow';
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+.container_descricao {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+
+}
+
+.div-descricao {
+    background: #d0edf1;
+    padding: 30px;
+}
+
+.descricao {
+    font-size: 1.4rem;
+    width: 500px;
+    text-align: center;
+}
+
+.cappuccino {
+    max-width: 180px;
+    height: auto;
+    border-radius: 90px;
+}
+
+/* Estilização - Catálogo geral dos produtos */
+.container{
+    background: #FFF0D4;
+    height: 830px;
+    box-shadow: 5px 4px 20px #97773a;
+}
+
+.container h2 {
+    padding-top: 90px;
+    margin-bottom: 80px;
+    font-family: 'Trebuchet MS';
+    font-size: 2.5rem;
+    color: #A65F3E;
+    text-align: center;
+}
+
+
+.container_produtos {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+}
+
+.div-produtos {
+    background: #d0edf1;
+    padding: 30px;
+    margin-bottom: 210px;
+}
+
+.descricao {
+    font-size: 1.4rem;
+    width: 500px;
+    text-align: center;
+}
+
+.div-foto-produtos {
+    height: 350px;
+    margin-bottom: 250px;
+    width: 300px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.div-foto-produtos::-webkit-scrollbar {
+    width: 25px;
+}
+
+.div-foto-produtos::-webkit-scrollbar-thumb {
+    background: #FCD8E6;
+}
+
+
+.produtos {
+    max-width: 180px;
+    border-radius: 90px;
+    border: 6px solid #FCD8E6;
+}
+
+/* Estilização - Descrição de acolhimento */
+
+.ultima_parte {
+    background: #fde9f1;
+    height: 620px;
+    box-shadow: 5px 4px 20px #BE629C;
+}
+
+.ultima_parte  h2 {
+    padding-top: 40px;
+    font-family: 'Just Me Again Down Here';
+    font-size: 2.8rem;
+    color: #BE629C;
+    text-align: center;
+    font-weight: 500;
+}
+
+.container_final {
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+
+}
+
+.div-final{
+    background: #d0edf1;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.descricao-final{
+    font-size: 1.4rem;
+    width: 500px;
+    text-align: center;
+}
+
+.local {
+    margin-top: 40px;
+    max-width: 290px;
+    height: auto;
+    border-radius: 90px;
+}
+
+

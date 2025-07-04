@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Jacques+Francois+Shadow&family=Jockey+One&family=Just+Me+Again+Down+Here&&family=Poppins&display=swap"
+        rel="stylesheet">
+    <title>Produtos</title>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="fundo_produtos">
+            <nav>
+                <h3 class="pr">
+                    <!-- Letras separadas para efeito visual -->
+                    <span>P</span>
+                    <span>R</span>
+                    <span>O</span>
+                    <span>D</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span>O</span>
+                    <span>S</span>
+                </h3>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção: Tops da Casa — destaques mais pedidos -->
+    <section>
+        <h2 class="titulo_tops_da_casa">Tops da Casa</h2>
+        <p class="descricao_tops">
+            Entre tantas opções, esses foram os que mais roubaram corações por aqui…! &#x1F9E1 <br>
+            Os sabores que viraram história, e que agora também podem fazer parte do seu momento.
+        </p>
+
+        <!-- Galeria de produtos em destaque -->
+        <div class="tops_da_casa">
+            <img src="./img_milkshake/Milkshake de Arco-íris.png" alt="MilkShake de Arco-íris">
+            <img src="./img_bubble_tea/Chá de Morango com Jelly.png" alt="Bubble de Morango">
+            <img src="./img_milkshake/Milkshake de Maça do Amor.png" alt="MilkShake de Maça do Amor">
+            <img src="./img_bubble_tea/Matcha Bubble Tea.png" alt="Matcha Bubble Tea">
+            <img src="./img_milkshake/MilkShake Viver nas Nuvens.jpg" alt="MilkShake Viver nas Nuvens">
+            <img src="./img_milkshake/Milkshake de Pistache.jpg" alt="MilkShake de Pistache">
+            <img src="./img_milkshake/Milkshake Asa de Fada.png" alt="MilkShake de Asa de fada">
+            <img src="./img_bubble_tea/Mango Bubble Tea.png" alt="Bubble de Mango">
+        </div>
+    </section>
+
+    <!-- Seção: Cardápio Especial — produtos autorais com destaque e descrição detalhada -->
+    <section class="cardapio_especial_detalhado">
+        <div class="estilo-click"><h2 class="titulo_cardapio_especial" onclick="mostrarCardapioEspecial()">Nosso Cardápio Especial<span style="margin-left: 650px; ">&#8595</span></h2></div>
+        <div id="ProdutosEspeciais"></div>
+    </section>
+
+    <!-- Seção: Cardápio Normal — produtos por categoria (cafés, milkshakes, bubble teas) -->
+    <section class="cardapio_normal">
+        <div class="estilo-click"><h2 class="titulo_cardapio_normal" onclick="mostrarCardapio()">Cardápio <span style="margin-left: 1150px; ">&#8595</span></h2></div>
+        <div id="ProdutosNormais"></div>
+    </section>
+    <br><br>
+
+    <!-- Rodapé com logo, frase institucional e link para contato -->
+    <footer>
+        <img class="logo" src="./img_logo/logo.jpg" alt="">
+        <div class="footer_frase_direitos">
+            <p>Do primeiro gole ao último pedaço..., a gente cuida pra ser especial</p>
+            <span>© 2025 | Todos os direitos reservados.</span>
+        </div>
+        <p class="contato"><a href="local_contato.html">Contato</a></p>
+    </footer>
+
+    <script src="./produtos_cardapio_especial.js"></script>
+    <script src="./produtos_cardapio_normal.js"></script>
+
+</body>
+
+</html>

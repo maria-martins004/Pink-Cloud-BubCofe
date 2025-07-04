@@ -1,0 +1,167 @@
+body {
+    margin: 0px;
+    margin-top: 0px;
+    background: #daf4ff;
+}
+
+/* Estilização da foto de fundo */
+.fundo_clubNuvem {
+    position: relative;
+    background-image: url('./img_clubNuvem/fundo_clubNuvem.png ');
+    height: 125vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.titulo_clubNuvem {
+    margin-top: 25rem;
+    font-size: 7rem;
+    font-family: 'Island Moments';
+    letter-spacing: 1rem;
+    font-weight: 300;
+    color: rgb(47, 172, 235);
+}
+
+.fundo_cartao_clubNuvem {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50vh;
+    width: 100%;
+    background-image: url('./img_clubNuvem/cartao_clubNuvem.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    z-index: 0;
+}
+
+.container_sessao_clubNuvem {
+    margin-top: 180px;
+    margin-bottom: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 180px; */
+}
+
+
+/* Estilização e animação */
+.titulo_clubNuvem span {
+    position: relative;
+    left: 100px;
+    opacity: 0;
+    display: inline-block;
+    animation: aparecerEsquerda 0.5s ease forwards;
+}
+
+.titulo_clubNuvem span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.titulo_clubNuvem span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.titulo_clubNuvem span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes aparecerEsquerda {
+    from {
+        left: 100px;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Estilização Título */
+.titulo_vip_clubNuvem {
+    font-family: 'Jockey One';
+    font-size: 4rem;
+    font-weight: 100;
+    color: rgb(91, 186, 233);
+    width: 500px;
+    text-align: center;
+    /* margin: 20px; */
+}
+
+/* Descrição */
+.descricao_vip_clubNuvem {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    width: 800px;
+}
+
+.traco {
+    width: 5px;
+    height: 700px;
+    background-color: rgb(160, 244, 225);
+}
+
+/* Estilização do botão */
+.botao_cadastro {
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(169, 198, 236), rgb(171, 231, 247));
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: 3px solid rgb(136, 204, 188);
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.botao_cadastro:hover {
+    background: linear-gradient(90deg, rgb(171, 231, 247), rgb(169, 198, 236));
+}
+
+/* Estilização do Rodapé */
+footer {
+    margin: 0px;
+    background: #c0e6f7;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 10px;
+}
+
+
+.logo {
+    max-width: 150px;
+    max-height: 130px;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.footer_frase_direitos {
+    margin: 35px;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: #308991;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contato {
+    margin: 70px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 1.2rem;
+    color: #308991;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}

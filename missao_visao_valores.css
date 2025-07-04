@@ -1,0 +1,172 @@
+/* Estilização do body ao geral */
+body {
+  margin: 0px;
+  background: #daf4ff;
+}
+
+/* Estilização da imagem de fundo */
+.fundo_nuvem {
+  position: relative;
+  background-image: url('./img_nuvem/nuvem.png'); 
+  height: 140vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center; 
+  overflow: hidden;
+  background-repeat: no-repeat;
+  z-index: -1; /* coloca atrás de outros elementos */
+}
+
+/* Estilização - Título principal do site */
+h1 {
+  font-family: 'Exile';
+  font-size: 7rem;
+  font-weight: 100;
+  color: #ffccf7;
+  text-shadow: 5px 0px 25px #308991; /* sombra azul-esverdeada */
+}
+
+/* Estilização - Subtítulo abaixo do h1 */
+.subtitulo {
+  font-family: 'Jacques Francois Shadow';
+  font-size: 1.8rem;
+  width: 1410px;
+  text-align: center;
+  text-shadow: 5px 0px 25px #ff39e1; /* sombra rosa neon */
+}
+
+/* Estilização - Imagem rosa com fundo decorado para a história */
+.esboco_rosa {
+  position: relative;
+  background-image: url('./img_fundo_esbocado_rosa/esboco_rosa.png');
+  height: 160vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform: scale(0.8);    /* começa menor */
+  opacity: 0;               /* começa invisível */
+  transition: transform 0.8s ease, opacity 0.8s ease; /* animação */
+}
+
+/* Classe extra usada via JS para animar a entrada da seção */
+.esboco_rosa.aparecer {
+  transform: scale(1);  /* tamanho normal */
+  opacity: 1;           /* visível */
+}
+
+/* Estilização - Título "Nossa História" */
+.empresa {
+  font-family: 'Island Moments';
+  font-size: 8rem;
+  text-align: center;
+  color: #f9e2f6;
+  text-shadow: 5px 0px 25px #ff39e1;
+}
+
+/* Estilização - Parágrafo da história */
+.historia {
+  font-size: 1.8rem;
+  width: 900px;
+}
+
+/* Estilização - Subtítulos gerais, como o da seção MVV */
+h2 {
+  font-family: 'Jockey One';
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 200;
+  color: #c684bc;
+  text-shadow: 5px 0px 25px #d45ec2;
+}
+
+/* Estilização - Container da seção Missão, Visão e Valores */
+.estilo-mvv {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 192, 203, 0.2), rgba(255, 255, 255, 0));
+  padding: 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+/* Estilização - Cada bloco individual dentro da seção MVV */
+.separar {
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 192, 203, 0.408), rgba(255, 255, 255, 0));
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos blocos MVV */
+.separar:hover {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 192, 203, 0.759), rgba(255, 255, 255, 0));
+  transform: scale(1.02); /* aumenta levemente */
+  box-shadow: 0 8px 16px rgba(255, 182, 193, 0.4);
+  cursor: pointer;
+}
+
+/* Estilização - Título de cada item da MVV */
+.titulo-mvv {
+  font-family: 'Jockey One';
+  color: #308991;
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+/* Estilização - Texto descritivo da missão, visão e valores */
+.descricao-mvv {
+  font-size: 1.4rem;
+  color: #444;
+}
+
+
+/* Estilização do Rodapé */
+footer {
+    margin: 0px;
+    background: #c0e6f7;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    margin-top: 10px;
+}
+
+
+.logo {
+    max-width: 150px;
+    max-height: 130px;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.footer_frase_direitos {
+    margin: 35px;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: #308991;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contato {
+    margin: 70px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 1.2rem;
+    color: #308991;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}

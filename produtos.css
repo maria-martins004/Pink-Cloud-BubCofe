@@ -1,0 +1,328 @@
+/* Estilização do body */
+body {
+    background-color: #FFF0D4;
+    margin: 0px;
+    /* height: 1000px; */
+}
+
+/* Estilização da Imagem de fundo */
+.fundo_produtos {
+    position: relative;
+    background-image: url('./img_produtos/fundo_produtos.png');
+    height: 122vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* Estilização do Cabeçalho  */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pr {
+    font-family: 'Jacques Francois Shadow';
+    font-size: 6rem;
+    font-weight: 300;
+    color: #492616;
+    text-shadow: 10px 0px 25px #490924;
+    letter-spacing: 10px;
+}
+
+/* Animação feita com css */
+.pr span {
+    position: relative;
+    left: 100px;
+    opacity: 0;
+    display: inline-block;
+    animation: aparecerDireita 0.5s ease forwards;
+}
+
+/* Fazendo as letras aparecerem uma por uma, da direita para esquerda */
+.pr span:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+.pr span:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.pr span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.pr span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.pr span:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.pr span:nth-child(6) {
+    animation-delay: 0.2s;
+}
+
+.pr span:nth-child(7) {
+    animation-delay: 0.1s;
+}
+
+.pr span:nth-child(8) {
+    animation-delay: 0s;
+}
+
+@keyframes aparecerDireita {
+    from {
+        left: 100px;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+/* Estilização das fotos dos produtos do Cardápio especial */
+.tops_da_casa {
+    padding: 30px;
+    margin-top: 30px;
+    width: 90%;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+    margin-left: 50px;
+}
+
+img {
+    max-width: 1000px;
+    max-height: 200px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.tops_da_casa:hover {
+    background: #f5dfb7;
+    border-radius: 40px;
+    border: 2px solid #ffcf67;
+}
+
+
+.tops_da_casa::-webkit-scrollbar {
+    width: 25px;
+}
+
+.tops_da_casa::-webkit-scrollbar-thumb {
+    background: #FCD8E6;
+    cursor: pointer;
+}
+
+.tops_da_casa::-webkit-scrollbar-thumb:hover {
+    background: #ffc8dd;
+}
+
+/* Estilização do Cardápio Especial */
+.titulo_cardapio_especial,
+.titulo_tops_da_casa {
+    position: relative;
+    font-family: 'Island Moments';
+    font-size: 8rem;
+    text-align: start;
+    color: #9c7444;
+    font-weight: 300;
+    padding: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+/* Adicionando pequena diferença para demonstração do cardápio especial para o cardápio normal */
+.titulo_cardapio_especial::after,
+.titulo_tops_da_casa::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.324);
+    transform: skewX(-50deg);
+}
+
+/* Efeito de Brilhozinho */
+.titulo_cardapio_especial:hover::after,
+.titulo_tops_da_casa:hover::after {
+    animation: brilhoPassando 0.5s linear forwards;
+}
+
+@keyframes brilhoPassando {
+    from {
+        left: -75%;
+    }
+
+    to {
+        left: 125%;
+    }
+}
+
+/* Estilização das descrições */
+.descricao_tops {
+    display: flex;
+    font-family: 'Jockey One';
+    font-weight: 200;
+    font-size: 1.8rem;
+    width: 1600px;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #552005;
+}
+
+
+.cardapio_especial_detalhado {
+    padding: 20px;
+}
+
+.produto_especial_detalhe {
+    background: #f5dfb7;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgb(111, 85, 2);
+}
+
+.produto_especial_detalhe h3 {
+    color: #9c7444;
+}
+
+h3 {
+    font-family: 'Jockey One';
+    font-weight: 300;
+    font-size: 2.3rem;
+}
+
+.descricao_cardapio_especial {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color: #3b190a;
+}
+
+/* Estilização do cardápio normal */
+.cardapio_normal {
+    padding: 20px;
+}
+
+.produto_detalhe {
+    background: #e5d0a8;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    box-shadow: 0 5px 5px rgb(105, 83, 17);
+}
+ 
+.titulo_cardapio_normal {
+    position: relative;
+    font-family: 'Island Moments';
+    font-size: 8rem;
+    text-align: start;
+    color: #b48a57;
+    font-weight: 300;
+    padding: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 0px;
+    margin-top: 0px; 
+    }
+
+
+.titulo_cardapio {
+    position: relative;
+    font-family: 'Island Moments';
+    font-size: 6rem;
+    text-align: start;
+    color: #65441c;
+    font-weight: 300;
+    padding: 30px;
+    overflow: hidden;
+    margin-bottom: 0px;  
+    margin-top: 0px;    
+}
+
+.cardapio_estilo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img_produto {
+    max-width: 190px;
+    max-height: 170px;
+    border-radius: 100px;
+}
+
+.descricao_cardapio {
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    color: #3b190a;
+    width: 950px;
+}
+
+.estilo-click {
+    background-color: #fae6c0;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.estilo-click:hover {
+    background-color: #f7deb0;
+}
+
+/* Estilização do Rodapé */
+footer {
+    margin: 0px;
+    background: #f7d8b1;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+
+.logo {
+    max-width: 150px;
+    max-height: 130px;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.footer_frase_direitos {
+    margin: 35px;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: #3b190a;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contato {
+    margin: 70px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3b190a;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,115 @@
+body {
+    margin: 0px;
+    background-color: #f8d0e9;
+}
+
+/* Estilização da imagem de fundo e Título*/
+
+.fundo_local {
+    position: relative;
+    background-image: url('./img_local_contato/Aonde\ nos\ Encontramos.png');
+    height: 110vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 482px;
+    margin-left: 45px;
+}
+
+.h1_animado {
+    font-family: 'Poppins';
+    width: 500px;
+    text-align: center;
+    color: #c10278;
+    font-size: 2.5rem;
+    opacity: 0;
+    position: relative;
+    margin-left: 120px;
+}
+
+/* Titulo animado */
+.h1_animado.animar {
+    animation: aparecerSuave 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilização dos títulos de contato e local */
+
+h2 {
+    position: relative;
+    font-family: 'Island Moments';
+    font-size: 6rem;
+    text-align: start;
+    color: #89376a;
+    font-weight: 300;
+    padding: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.d_mensagem {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+p {
+    font-family: 'Poppins';
+    font-size: 1.9rem;
+    padding: 30px;
+    width: 900px;
+}
+
+/* Estilização do botão */
+.enviar_mensagem {
+    background: linear-gradient(90deg, rgb(218, 183, 224), rgb(242, 165, 239));
+    color: rgb(92, 16, 105);
+    padding: 10px 15px;
+    border: 2px solid rgb(80, 57, 84);
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.enviar_mensagem:hover {
+    background: linear-gradient(90deg, rgb(242, 165, 239), rgb(218, 183, 224));
+    color: rgb(95, 11, 92);
+}
+
+
+.enviar_mensagem.ativo {
+    transform: scale(1.05);
+}
+
+.traco_no_meio {
+    background: #f693d1;
+    width: 5px;
+
+}
+
+/* Estilização do mapa */
+#map {
+    height: 600px;
+}
+

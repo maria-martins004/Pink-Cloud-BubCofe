@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="compre_ja.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exile&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Island+Moments&family=Jacques+Francois+Shadow&family=Jockey+One&family=Just+Me+Again+Down+Here&display=swap"
+        rel="stylesheet">
+    <title>Entre para o Clube</title>
+</head>
+
+<body>
+    <section>
+        <!-- Titulo -->
+        <h2 class="titulo_formulario">Faça parte do nosso Clube</h2>
+        <!-- Formulario -->
+        <form id="forms" action="">
+            <label>Nome</label>
+            <br>
+            <input type="text" name="nome">
+            <br>
+            <label>CPF</label>
+            <br>
+            <input id="cpf" type="text" name="cpf">
+            <br>
+            <label>Celular</label>
+            <br>
+            <input type="text" name="celular">
+            <br>
+            <label>Data de Nascimento</label>
+            <br>
+            <input id="data_n" type="date" name="data_n">
+            <br>
+            <label>Endereço</label>
+            <br>
+            <input type="text" name="endereco">
+
+            <div class="traco"></div>
+
+            <!-- Escolha de Plano -->
+            <label>Escolha seu plano:</label>
+            <br>
+            <div class="opcao-plano">
+                <label><input type="radio" name="plano" value="mensal"> Mensal - R$10,99</label>
+                <label><input type="radio" name="plano" value="anual"> Anual - R$120,00</label>
+            </div>
+
+            <!-- Formas de pagamento, escondidas até escolher um plano -->
+            <div id="pagamento-opcoes" style="display: none;">
+                <label>Forma de pagamento:</label>
+                <div class="opcao-pagamento">
+                    <label><input type="radio" name="pagamento" value="credito"> Cartão de Crédito</label>
+                    <label><input type="radio" name="pagamento" value="debito">Cartão de Débito</label>
+                </div>
+            </div>
+            <br>
+            <div class="adicional_confirmação"></div>
+            <button id="btn_avançar" type="submit">Avançar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé com logo, frase institucional e link para contato -->
+    <footer>
+        <img class="logo" src="./img_logo/logo.jpg" alt="">
+        <div class="footer_frase_direitos">
+            <p>Do primeiro gole ao último pedaço..., a gente cuida pra ser especial</p>
+            <span>© 2025 | Todos os direitos reservados.</span>
+        </div>
+        <p class="contato"><a href="local_contato.html">Contato</a></p>
+    </footer>
+    
+    <script src="./compre_ja.js"></script>
+</body>
+
+</html>

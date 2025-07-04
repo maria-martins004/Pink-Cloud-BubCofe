@@ -1,0 +1,134 @@
+body {
+    margin: 0px;
+    background-color: #FFF0D4;
+    ;
+}
+
+/* Estilização da imagem de capa e título */
+.img_estilo {
+    display: flex;
+    width: 100%;
+    height: calc(150vh - 80px);
+    background-image: url(../img_eventos/eventos.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+
+    border-top: 5px solid #FFF0D4;
+    border-bottom: 5px solid #FFF0D4;
+}
+
+.img_estilo h2 {
+    font-family: "Exile";
+    text-shadow: 10px 0px 25px #000000;
+    font-weight: 200;
+    font-size: 7rem;
+    color: rgb(255, 174, 235);
+}
+
+/* Estilização da Descrição */
+.container_eventos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    margin: 20px;
+}
+
+.container_eventos h3 {
+    font-family: "Jockey One";
+    font-size: 3rem;
+    font-weight: 200;
+    color: #a9894e;
+}
+
+.traco {
+    background: #fbdea7;
+    margin-top: 20px;
+    height: 5px;
+    width: 100%;
+}
+
+.descricao_eventos {
+    font-family: "Poppins";
+    font-size: 1.5rem;
+    width: 2200px;
+}
+
+/* Estilização da mensagem e botão */
+.mensagem_eventos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mensagem_eventos h3 {
+    font-family: "Poppins";
+    font-size: 2rem;
+    width: 1400px;
+    color: #a18665;
+}
+
+button {
+    background: linear-gradient(90deg, rgb(255, 212, 152), rgb(255, 200, 243));
+    color: rgb(104, 46, 2);
+    padding: 15px 15px;
+    border: 2px solid rgb(80, 57, 84);
+    border-radius: 20px;
+    font-family: 'Poppins';
+    font-size: 1.3rem;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Estilização do Rodapé */
+footer {
+    margin: 0px;
+    background: #f7d8b1;
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+
+.logo {
+    max-width: 150px;
+    max-height: 130px;
+    border-radius: 80px;
+    margin: 20px;
+}
+
+.footer_frase_direitos {
+    margin: 35px;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: #3b190a;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contato {
+    margin: 70px;
+}
+
+.contato a {
+    text-decoration: none;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 1.2rem;
+    color: #3b190a;
+}
+
+.contato a:hover {
+    text-decoration: underline;
+}

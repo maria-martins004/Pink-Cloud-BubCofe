@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local e Contato</title>
+    <link rel="stylesheet" href="local_contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Jacques+Francois+Shadow&family=Jockey+One&family=Just+Me+Again+Down+Here&&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body>
+    <!-- Cabeçalho/Título  -->
+    <header>
+        <div class="fundo_local">
+            <nav>
+                <h1 class="h1_animado">Nosso cantinho — onde estamos te esperando</h1>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de mensagem -->
+    <section>
+        <h2>Quer falar com a gente?</h2>
+        <div class="d_mensagem">
+            <button class="enviar_mensagem">Envie aqui sua mensagem</button>
+            <div class="traco_no_meio"></div>
+            <p>Acreditamos que ouvir você, é o melhor jeito de evoluir!</p>
+        </div>
+        <div class="">
+            <h2>Quer visitar a gente? No momento, estamos te esperando neste endereço:</h2>
+            <div id="map" class=""></div>
+        </div>
+    </section>
+
+    <script src="./local_contato.js"></script>
+
+</body>
+
+</html>
