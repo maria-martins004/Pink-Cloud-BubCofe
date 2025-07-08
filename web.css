@@ -1,4 +1,3 @@
-
 /* Define a cor de fundo principal do site e remove a margem padrão da página. */
 body {
     background: #FCD8E6;
@@ -46,17 +45,17 @@ body {
 
 /* Estilização da imagem de fundo - Canva */
 .nuvem_rosa {
-  position: relative;
-  background-image: url('./img_nuvem/nuvem_rosa.png');
-  height: 85vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  z-index: -1;
+    position: relative;
+    background-image: url('./img_nuvem/nuvem_rosa.png');
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 /* Estilizando a div_web - container dos titulos e slogan */
@@ -98,61 +97,66 @@ body {
 /* Animando os Titulos e o Slogan */
 
 /* Começo invisível e fora de posição */
-.h2_pc, .h2_bc, .slogan {
-  opacity: 0;
-  position: relative;
+.h2_pc,
+.h2_bc,
+.slogan {
+    opacity: 0;
+    position: relative;
 }
 
 /* Quando recebem o .animar, executam as animações com determinada direção */
 
 /* Pink Cloud -> vindo da esquerda */
 .h2_pc.animar {
-  animation: entrarEsquerda 1s forwards;
+    animation: entrarEsquerda 1s forwards;
 }
 
 /* BubCófe -> vindo da direita */
 .h2_bc.animar {
-  animation: entrarDireita 1s forwards;
-  animation-delay: 0.2s;
+    animation: entrarDireita 1s forwards;
+    animation-delay: 0.2s;
 }
 
 /* Slogan -> depois que os dois terminarem */
 .slogan.animar {
-  animation: aparecerSuave 1s forwards;
-  animation-delay: 1.4s;
+    animation: aparecerSuave 1s forwards;
+    animation-delay: 1.4s;
 }
 
 /* Definem como os elementos vão entrar em cena (movimento + transição de opacidade). */
 
 @keyframes entrarEsquerda {
-  from {
-    left: -150px;
-    opacity: 0;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
+    from {
+        left: -150px;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes entrarDireita {
-  from {
-    left: 150px;
-    opacity: 0;
-  }
-  to {
-    left: 0;
-    opacity: 1;
-  }
+    from {
+        left: 150px;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
 }
 
 @keyframes aparecerSuave {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Estilização - Pequena descrição e breve apresentação geral*/
@@ -206,9 +210,11 @@ body {
 }
 
 /* Estilização - Catálogo geral dos produtos */
-.container{
+.container {
     background: #FFF0D4;
     height: 830px;
+    /* padding: 20px; */
+    /* min-height: 500px; */
     box-shadow: 5px 4px 20px #97773a;
 }
 
@@ -245,7 +251,7 @@ body {
 .div-foto-produtos {
     height: 350px;
     margin-bottom: 250px;
-    width: 300px;
+    width: 400px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -276,7 +282,7 @@ body {
     box-shadow: 5px 4px 20px #BE629C;
 }
 
-.ultima_parte  h2 {
+.ultima_parte h2 {
     padding-top: 40px;
     font-family: 'Just Me Again Down Here';
     font-size: 2.8rem;
@@ -294,13 +300,13 @@ body {
 
 }
 
-.div-final{
+.div-final {
     background: #d0edf1;
     padding: 30px;
     margin-top: 50px;
 }
 
-.descricao-final{
+.descricao-final {
     font-size: 1.4rem;
     width: 500px;
     text-align: center;
@@ -313,4 +319,130 @@ body {
     border-radius: 90px;
 }
 
+/* Responsividade */
 
+@media (min-width: 1322px) and (max-width: 1400px) {
+    .nuvem_rosa {
+        background-image: url('./img_nuvem/nuvem_rosa_4.png');
+    }
+}
+
+@media (max-width: 1320px) {
+    .nuvem_rosa {
+        background-image: url('./img_nuvem/nuvem_rosa_4.png');
+    }
+
+    .link {
+        gap: 50px;
+    }
+
+    .h2_pc {
+        margin-right: 0px;
+    }
+
+    .h2_bc {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .nuvem_rosa {
+        background-image: url('./img_nuvem/fundo_rosa.png');
+    }
+}
+
+@media (max-width: 1230px) {
+    .frase {
+        font-size: 1.8rem;
+    }
+
+    .container_descricao {
+        flex-direction: column-reverse;
+        gap: 20px;
+        margin-top: 95px;
+    }
+
+    .cappuccino {
+        max-width: 0px;
+        border-radius: 0px;
+    }
+
+    .container {
+        height: 1100px;
+    }
+
+    .container_produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .div-produtos {
+        margin-bottom: 20px;
+    }
+
+    .produtos {
+        max-width: 170px;
+        border-radius: 90px;
+        border: 6px solid #FCD8E6;
+    }
+
+    .div-foto-produtos {
+        height: 250px;
+        width: 30%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .div-foto-produtos::-webkit-scrollbar {
+        width: 25px;
+    }
+
+    .div-foto-produtos::-webkit-scrollbar-thumb {
+        background: #ffccdf;
+    }
+
+    .container_final {
+        gap: 50px;
+    }
+
+    .local {
+        max-width: 250px;
+        border-radius: 50px;
+    }
+}
+
+@media (max-width: 970px) {
+    .h2_pc {
+        font-size: 9rem;
+    }
+
+    .h2_bc {
+        font-size: 9rem;
+    }
+
+    .receber_cliente h2 {
+        font-size: 2rem;
+    }
+
+    .frase {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #bd268d;
+        font-family: 'Jockey One';
+        letter-spacing: 0.2rem;
+    }
+
+    .container_descricao {
+        margin-top: 65px;
+    }
+
+    .descricao {
+        width: 300px;
+    }
+}
