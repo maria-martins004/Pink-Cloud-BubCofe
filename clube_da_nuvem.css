@@ -4,13 +4,72 @@ body {
     background: #daf4ff;
 }
 
+
+.nav_web {
+    display: flex;
+    justify-content: center;
+    background-color: #daf4ff;
+    padding: 10px 30px;
+}
+
+/* Estilização dos links presentes na nav */
+.link {
+    display: flex;
+    gap: 100px;
+}
+
+
+.link li {
+    text-align: center;
+    list-style: none;
+    font-family: 'Jockey One';
+}
+
+.link li a {
+    text-decoration: none;
+    color: rgb(47, 172, 235);
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.container_nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.menu-responsivo {
+    display: none;
+}
+
 /* Estilização da foto de fundo */
 .fundo_clubNuvem {
-    position: relative;
-    background-image: url('./img_clubNuvem/fundo_clubNuvem.png ');
-    height: 125vh;
-    width: 100%;
     display: flex;
+    width: 100%;
+    height: 125vh;
+    position: relative;
+    background: linear-gradient(rgba(218, 248, 255, 0.5), rgba(222, 240, 255, 0.082)),
+        url(./img_clubNuvem/fundo_clubNuvem.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     flex-direction: column;
     align-items: center;
     background-repeat: no-repeat;
@@ -75,6 +134,7 @@ body {
         left: 100px;
         opacity: 0;
     }
+
     to {
         left: 0;
         opacity: 1;
