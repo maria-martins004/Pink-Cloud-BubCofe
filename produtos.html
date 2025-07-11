@@ -16,8 +16,26 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="fundo_produtos">
-            <nav>
+        <nav class="nav_web">
+            <input type="checkbox" id="menu-responsivo" class="menu-responsivo">
+
+            <label for="menu-responsivo" class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+
+            <ul class="link">
+                <li><a href="web.html">Principal</a></li>
+                <li><a href="missao_visao_valores.html">M.V.V</a></li>
+                <li><a href="clube_da_nuvem.html">Clube da Nuvem</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+            <div class="fundo_produtos container">
                 <h3 class="pr">
                     <!-- Letras separadas para efeito visual -->
                     <span>P</span>
@@ -29,7 +47,6 @@
                     <span>O</span>
                     <span>S</span>
                 </h3>
-            </nav>
         </div>
     </header>
 
@@ -56,13 +73,19 @@
 
     <!-- Seção: Cardápio Especial — produtos autorais com destaque e descrição detalhada -->
     <section class="cardapio_especial_detalhado">
-        <div class="estilo-click"><h2 class="titulo_cardapio_especial" onclick="mostrarCardapioEspecial()">Nosso Cardápio Especial<span style="margin-left: 650px; ">&#8595</span></h2></div>
+        <div class="estilo-click">
+            <h2 class="titulo_cardapio_especial" onclick="mostrarCardapioEspecial()">Nosso Cardápio Especial<span
+                    style="margin-left: 650px; ">&#8595</span></h2>
+        </div>
         <div id="ProdutosEspeciais"></div>
     </section>
 
     <!-- Seção: Cardápio Normal — produtos por categoria (cafés, milkshakes, bubble teas) -->
     <section class="cardapio_normal">
-        <div class="estilo-click"><h2 class="titulo_cardapio_normal" onclick="mostrarCardapio()">Cardápio <span style="margin-left: 1150px; ">&#8595</span></h2></div>
+        <div class="estilo-click">
+            <h2 class="titulo_cardapio_normal" onclick="mostrarCardapio()">Cardápio <span
+                    style="margin-left: 1150px; ">&#8595</span></h2>
+        </div>
         <div id="ProdutosNormais"></div>
     </section>
     <br><br>
