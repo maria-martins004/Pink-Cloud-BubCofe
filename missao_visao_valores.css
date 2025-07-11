@@ -4,29 +4,86 @@ body {
   background: #daf4ff;
 }
 
+.nav_web {
+  display: flex;
+  justify-content: center;
+  background-color: #daf4ff;
+  padding: 10px 30px;
+}
+
+/* Estilização dos links presentes na nav */
+.link {
+  display: flex;
+  gap: 100px;
+}
+
+
+.link li {
+  text-align: center;
+  list-style: none;
+  font-family: 'Jockey One';
+}
+
+.link li a {
+  text-decoration: none;
+  color: #308991;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.container_nav {
+  display: flex;
+  justify-content: space-around;
+  /* ou space-evenly */
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.menu-responsivo {
+  display: none;
+}
+
 /* Estilização da imagem de fundo */
 .fundo_nuvem {
-  position: relative;
-  background-image: url('./img_nuvem/nuvem.png');
-  height: 140vh;
-  width: 100%;
   display: flex;
+  width: 100%;
+  height: 140vh;
+  background: linear-gradient(rgba(218, 248, 255, 0.5), rgba(222, 240, 255, 0.616)),
+    url(./img_nuvem/nuvem.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  z-index: -1;
-  /* coloca atrás de outros elementos */
+  border-top: 5px solid rgba(222, 240, 255, 0.616);
+  border-bottom: 5px solid #daf4ff;
 }
 
 /* Estilização - Título principal do site */
 h1 {
   font-family: 'Exile';
-  font-size: 7rem;
+  font-size: 8.2rem;
   font-weight: 100;
   color: #ffccf7;
   text-shadow: 5px 0px 25px #308991;
+  text-align: center;
   /* sombra azul-esverdeada */
 }
 
@@ -34,54 +91,42 @@ h1 {
 .subtitulo {
   font-family: 'Jacques Francois Shadow';
   font-size: 1.8rem;
-  width: 1410px;
+  width: 1250px;
   text-align: center;
   text-shadow: 5px 0px 25px #ff39e1;
   /* sombra rosa neon */
 }
 
-/* Estilização - Imagem rosa com fundo decorado para a história */
-.esboco_rosa {
-  position: relative;
-  background-image: url('./img_fundo_esbocado_rosa/esboco_rosa.png');
-  height: 160vh;
-  width: 100%;
+.nossa_historia {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  z-index: -1;
-  transform: scale(0.8);
-  /* começa menor */
+   transform: scale(0.8);
   opacity: 0;
-  /* começa invisível */
   transition: transform 0.8s ease, opacity 0.8s ease;
-  /* animação */
 }
 
-/* Classe extra usada via JS para animar a entrada da seção */
-.esboco_rosa.aparecer {
+.nossa_historia.aparecer {
   transform: scale(1);
-  /* tamanho normal */
   opacity: 1;
-  /* visível */
 }
 
-/* Estilização - Título "Nossa História" */
 .empresa {
   font-family: 'Island Moments';
   font-size: 8rem;
   text-align: center;
-  color: #f9e2f6;
-  text-shadow: 5px 0px 25px #ff39e1;
+  color: #4890b9;
+  text-shadow: 5px 0px 25px #ff62e7;
+  margin: 0px;
+  margin-top: 80px
 }
 
 /* Estilização - Parágrafo da história */
 .historia {
   font-size: 1.8rem;
   width: 900px;
+  margin-bottom: 80px;
 }
 
 /* Estilização - Subtítulos gerais, como o da seção MVV */
@@ -141,16 +186,17 @@ footer {
   margin: 0px;
   background: #c0e6f7;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 150px;
   margin-top: 10px;
+  width: 100%;
 }
 
 
 .logo {
-  max-width: 150px;
-  max-height: 130px;
+  max-width: 120px;
+  max-height: 120px;
   border-radius: 80px;
   margin: 20px;
 }
@@ -158,7 +204,7 @@ footer {
 .footer_frase_direitos {
   margin: 35px;
   font-family: "Poppins";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #308991;
   align-items: center;
   text-align: center;
@@ -173,7 +219,7 @@ footer {
   text-decoration: none;
   font-family: "Poppins";
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #308991;
 }
 
@@ -182,66 +228,112 @@ footer {
 }
 
 /* Responsividade */
-
-@media (max-width: 1330px) {
-  .subtitulo {
-    width: 1200px;
+@media (max-width: 1295px) {
+  h1 {
+    font-size: 8rem;
   }
-}
 
-@media (max-width: 1200px) {
   .subtitulo {
     width: 1000px;
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1215px) {
   h1 {
-    font-size: 6rem;
-  }
-
-  .subtitulo {
-    font-size: 1.6rem;
-    width: 890px;
-  }
-
-  .historia {
-    font-size: 1.6rem;
-    width: 800px;
-  }
-}
-
-@media (max-width: 915px) {
-  h1 {
-    font-size: 5.3rem;
-  }
-
-  .subtitulo {
-    width: 690px;
-  }
-
-  .empresa {
     font-size: 7rem;
   }
 
-  .historia {
-    width: 650px;
-    font-size: 1.5rem;
+  .subtitulo {
+    font-size: 1.6rem;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 
-@media (max-width: 815px) {
-  h1 {
-    font-size: 4.5rem;
+@media (max-width: 1040px) {
+  .subtitulo {
+    width: 820px
+  }
+
+  .historia {
+    font-size: 1.7rem;
+    width: 700px;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .footer_frase_direitos {
+    font-size: 1.2rem;
+  }
+
+  .contato a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 930px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .menu span {
+    background-color: #ee4fd3;
+  }
+
+  .link {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #e2f6ff;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(216, 24, 200, 0.1);
+    position: relative;
+  }
+
+  .menu-responsivo:checked~.link {
+    display: flex;
   }
 
   .subtitulo {
-    font-size: 1.4rem;
-    width: 550px;
+    width: 600px;
+  }
+
+  .historia {
+    width: 600px;
+  }
+}
+
+@media (max-width: 770px) {
+  footer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 668px) {
+  .logo {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  footer {
+    height: 150px;
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 630px) {
+  .subtitulo {
+    width: 400px;
   }
 
   .empresa {
@@ -249,20 +341,12 @@ footer {
   }
 
   .historia {
-    font-size: 1.4rem;
-    width: 500px;
+    font-size: 1.3rem;
+    width: 400px;
   }
 
   h2 {
     font-size: 2.3rem;
-  }
-
-  .estilo-mvv {
-    padding: 25px;
-  }
-
-  .separar {
-    padding: 15px;
   }
 
   .titulo-mvv {
@@ -272,83 +356,43 @@ footer {
   .descricao-mvv {
     font-size: 1.2rem;
   }
-
-  footer {
-    height: 190px;
-  }
 }
 
-@media (max-width: 715px) {
-  footer {
-    height: 190px;
-  }
-
-  .logo {
-    max-width: 100px;
-    max-height: 100px;
-  }
-}
-
-@media (max-width: 685px) {
+@media (max-width: 480px) {
   h1 {
-    font-size: 4rem;
-  }
-
-  .subtitulo {
-    font-size: 1.2rem;
-    width: 500px;
-  }
-
-  .empresa {
-    font-size: 5.5rem;
-  }
-
-  .historia {
-    font-size: 1.3rem;
-  }
-
-  .logo {
-    max-width: 90px;
-    max-height: 90px;
-  }
-}
-
-@media (max-width: 605px) {
-  h1 {
-    font-size: 3.5rem;
+    font-size: 4.8rem;
   }
 
   .subtitulo {
     font-family: "Poppins";
-    font-weight: 200;
-    font-size: 1.1rem;
-    color: #308991;
-    width: 450px;
+    font-size: 1.05rem;
+    width: 250px;
   }
 
   .empresa {
-    font-size: 5.2rem;
+    font-size: 5.8rem;
   }
 
   .historia {
-    font-size: 1.2rem;
-    width: 400px;
-  }
-
-  h2 {
-    font-size: 2rem;
+    font-size: 1.1rem;
+    width: 350px;
   }
 
   footer {
-    height: 260px;
+    height: auto;
+    flex-direction: column;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 375px){
+  .empresa {
+    font-size: 4.2rem;
   }
 
-  .footer_frase_direitos {
+  .historia {
     font-size: 1rem;
-    width: 500px;
-  }
-
-  .contato a {
-    font-size: 1rem;
+    width: 300px;
+    margin-left: 10px;
   }
 }
