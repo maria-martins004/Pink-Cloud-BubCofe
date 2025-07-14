@@ -349,13 +349,13 @@ body {
 
 @media (min-width: 1322px) and (max-width: 1400px) {
     .nuvem_rosa {
-        background-image: url('./img_nuvem/nuvem_rosa_4.png');
+        background-image: url('./img_nuvem/nuvem_rosa_2.png');
     }
 }
 
 @media (max-width: 1320px) {
     .nuvem_rosa {
-        background-image: url('./img_nuvem/nuvem_rosa_4.png');
+        background-image: url('./img_nuvem/nuvem_rosa_2.png');
     }
 
     .link {

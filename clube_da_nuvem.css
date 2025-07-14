@@ -83,20 +83,9 @@ body {
     letter-spacing: 1rem;
     font-weight: 300;
     color: rgb(47, 172, 235);
+    /* margin-left: 650px; */
 }
 
-.fundo_cartao_clubNuvem {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 50vh;
-    width: 100%;
-    background-image: url('./img_clubNuvem/cartao_clubNuvem.png');
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    z-index: 0;
-}
 
 .container_sessao_clubNuvem {
     margin-top: 180px;
@@ -139,6 +128,19 @@ body {
         left: 0;
         opacity: 1;
     }
+}
+
+.fundo_cartao_clubNuvem {
+    margin-bottom: 0px;
+    margin-top: 100px;
+    right: 0;
+    height: 50vh;
+    width: 100%;
+    background-image: url('./img_clubNuvem/cartao_clubNuvem.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 0;
 }
 
 /* Estilização Título */
