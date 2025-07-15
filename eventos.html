@@ -16,11 +16,26 @@
 <body>
     <!-- Cabeçalho/Título -->
     <header>
-        <nav>
-            <div class="img_estilo">
-                <h2>Espaço para Eventos</h2>
-            </div>
+        <nav class="nav_web">
+            <input type="checkbox" id="menu-responsivo" class="menu-responsivo">
+
+            <label for="menu-responsivo" class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="link">
+                <li><a href="web.html">Principal</a></li>
+                <li><a href="missao_visao_valores.html">M.V.V</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="clube_da_nuvem.html">Clube da Nuvem</a></li>
+            </ul>
         </nav>
+        <hr>
+        <div class="img_estilo">
+            <h2>Espaço para Eventos</h2>
+        </div>
     </header>
 
     <!-- Pequena descrição sobre as fotos e eventos que já tivemos -->
@@ -47,8 +62,17 @@
     <section class="mensagem_eventos">
         <h3>Caso se interesse, envie-nos uma mensagem sobre o evento que deseja realizar. <br> Retornaremos com o
             orçamento o mais breve possível!</h3>
-        <button id="btn">Mande seu orçamento aqui!</button>
+        <input class="btn" type="button" id="btn" value="Mande seu orçamento aqui!">
     </section>
+
+    <div id='chat-toggle' title="Abrir Chat">🎃</div>
+    <div id="chat-window">
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." />
+            <button id="chat-send-btn">Enviar</button>
+        </div>
+    </div>
 
     <!-- Rodapé com logo, frase institucional e link para contato -->
     <footer>

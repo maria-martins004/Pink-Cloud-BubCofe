@@ -4,6 +4,61 @@ body {
     ;
 }
 
+.nav_web {
+    display: flex;
+    justify-content: center;
+    background-color: #FFF0D4;
+    padding: 10px 30px;
+}
+
+/* Estilização dos links presentes na nav */
+.link {
+    display: flex;
+    gap: 100px;
+}
+
+
+.link li {
+    text-align: center;
+    list-style: none;
+    font-family: 'Jockey One';
+}
+
+.link li a {
+    text-decoration: none;
+    color: #A65F3E;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.container_nav {
+    display: flex;
+    justify-content: space-around;
+    /* ou space-evenly */
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.menu-responsivo {
+    display: none;
+}
+
+
 /* Estilização da imagem de capa e título */
 .img_estilo {
     display: flex;
@@ -77,7 +132,7 @@ body {
     color: #a18665;
 }
 
-button {
+.btn {
     background: linear-gradient(90deg, rgb(255, 212, 152), rgb(255, 200, 243));
     color: rgb(104, 46, 2);
     padding: 15px 15px;
@@ -88,6 +143,94 @@ button {
     margin: 30px;
     cursor: pointer;
     transition: 0.3s ease;
+}
+
+#chat-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #bda477;
+    color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Janela do chat (inicialmente escondida) */
+#chat-window {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    width: 450px;
+    height: 500px;
+    background: rgb(221, 206, 157);
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* Área das mensagens */
+#chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 16.5px;
+    border-radius: 10px
+}
+
+/* Mensagens do bot */
+.bot-message {
+    background: #f5e485;
+    padding: 10px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    max-width: 80%;
+}
+
+/* Mensagens do usuário */
+.user-message {
+    background: #c99637;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin: 10px;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+/* Campo para enviar texto */
+#chat-input-container {
+    border-top: 1px solid #ccc;
+    padding: 8px;
+    display: flex;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#chat-send-btn {
+    background: #756026;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 /* Estilização do Rodapé */
