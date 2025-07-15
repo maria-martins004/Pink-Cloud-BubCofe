@@ -534,6 +534,26 @@ body {
 
 }
 
+@media (max-width: 974px) {
+    #chat-window {
+        width: 400px;
+        height: 450px;
+        margin-right: 20px;
+    }
+
+    #chat-messages {
+        font-size: 18px;
+    }
+
+    #chat-input {
+        font-size: 18px;
+    }
+
+    #chat-send-btn {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 970px) {
     .h2_pc {
         font-size: 9rem;
@@ -667,6 +687,24 @@ body {
         width: 400px;
     }
 
+    #chat-window {
+        width: 300px;
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    #chat-messages {
+        font-size: 15px;
+    }
+
+    #chat-input {
+        font-size: 15px;
+    }
+
+    #chat-send-btn {
+        font-size: 15px;
+    }
+
 }
 
 @media (max-width: 600px) {
@@ -735,6 +773,28 @@ body {
     .slogan {
         font-size: 1.1rem;
     }
+
+    #chat-window {
+        width: 290px;
+        height: 310px;
+        margin-right: 10px;
+    }
+
+    #chat-messages {
+        font-size: 15px;
+    }
+
+    #chat-input-container {
+        padding: 5px;
+    }
+
+    #chat-input {
+        font-size: 15px;
+    }
+
+    #chat-send-btn {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 447.50px) {
@@ -775,5 +835,27 @@ body {
     .descricao-final {
         font-size: 1.1rem;
         width: 200px;
+    }
+
+    #chat-window {
+        width: 290px;
+        height: 310px;
+        margin-right: 10px;
+    }
+
+    #chat-messages {
+        font-size: 15px;
+    }
+
+    #chat-input-container {
+        padding: 5px;
+    }
+
+    #chat-input {
+        font-size: 15px;
+    }
+
+    #chat-send-btn {
+        font-size: 15px;
     }
 }
