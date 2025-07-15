@@ -185,3 +185,20 @@ chatInput.addEventListener('keydown', (e) => {
         sendMessage();
     }
 });
+
+// Função para animação do fundo com nuvem deslizando lentamente para direita
+
+const fundo = document.querySelector('.fundo_local');
+let posicaoX = 0;
+const velocidade = 0.5;
+const larguraImagem = 220;
+
+const intervalo = setInterval(() => {
+    // caso queira a animação para direita '+', caso queira para esquerda '-'
+    posicaoX += velocidade;
+    if (posicaoX <= -larguraImagem) {
+        posicaoX = -larguraImagem;
+        clearInterval(intervalo);
+    }
+    fundo.style.backgroundPosition = `${posicaoX}px 0`;
+}, 20);

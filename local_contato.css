@@ -3,33 +3,93 @@ body {
     background-color: #f8d0e9;
 }
 
+.nav_web {
+  display: flex;
+  justify-content: center;
+  background-color: #f8d0e9;
+  padding: 10px 30px;
+}
+
+/* Estilização dos links presentes na nav */
+.link {
+  display: flex;
+  gap: 100px;
+}
+
+
+.link li {
+  text-align: center;
+  list-style: none;
+  font-family: 'Jockey One';
+}
+
+.link li a {
+  text-decoration: none;
+  color: #A65F3E;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.container_nav {
+  display: flex;
+  justify-content: space-around;
+  /* ou space-evenly */
+  align-items: center;
+  width: 100%;
+  padding: 0 15px;
+}
+
+
+.menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.menu-responsivo {
+  display: none;
+}
+
 /* Estilização da imagem de fundo e Título*/
 
 .fundo_local {
-    position: relative;
-    background-image: url('./img_local_contato/Aonde\ nos\ Encontramos.png');
-    height: 110vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    z-index: -1;
+  display: flex;
+  width: 100%;
+  height: 140vh;
+  background: linear-gradient(rgba(252, 215, 246, 0.678), rgba(255, 187, 244, 0.295)),
+    url(./img_nuvem/nuvemRosa.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 5px solid #f8d0e9;
+  border-bottom: 5px solid #f8d0e9;
 }
 
-nav {
+.nav-titulo {
     display: flex;
     justify-content: center;
-    margin-top: 482px;
-    margin-left: 45px;
+    align-items: center;
+    /* margin-top: 482px;
+    margin-left: 45px; */
 }
 
 .h1_animado {
-    font-family: 'Poppins';
-    width: 500px;
+    font-family: 'Island Moments';
     text-align: center;
-    color: #c10278;
-    font-size: 2.5rem;
+    color: #89376a;
+    font-size: 7.5rem;
+    font-weight: 300;
     opacity: 0;
     position: relative;
     margin-left: 120px;
