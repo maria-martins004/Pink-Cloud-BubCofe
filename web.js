@@ -63,9 +63,9 @@ function sendMessage() {
         processarMensagensUsuario(text);
     }
 }
-// Controla o fluxo de perguntas
 
-
+// Controla fluxo de perguntas
+// Fluxo do Cartão
 function processarMensagemUsuario(texto) {
     if (etapa === 0) {
         if (texto.toLowerCase().includes("cartão")) {
@@ -101,6 +101,7 @@ function processarMensagemUsuario(texto) {
     }
 }
 
+// Fluxo de respostas mais simples..., até o momento
 const prespostas = {
     "oi": "Oi, Que bom te ver por aqui, Como posso ajudá-lo(a) 😊",
     "olá": "Olá, tudo bem? Como eu posso ajudar você?",
@@ -143,6 +144,7 @@ function processarMensagensUsuario(texto) {
     }
 }
 
+// Função para adicionar mensagem do usuário
 function addUserMessage(text) {
     const msg = document.createElement('div');
     msg.className = 'user-message';
@@ -151,8 +153,10 @@ function addUserMessage(text) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+// Evento de click do botão
 chatSendBtn.addEventListener('click', sendMessage);
 
+// Evento para quando o usuário pressionar o botão de enter, enviar a mensagem
 chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         sendMessage();

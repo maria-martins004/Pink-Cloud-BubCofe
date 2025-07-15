@@ -57,13 +57,20 @@ function sendMessage() {
     if (text === '') return;
     addUserMessage(text);
     chatInput.value = '';
-    processarMensagemUsuario(text);
+
+    if (etapa > 0 || text.toLowerCase().includes("cartão")) {
+        processarMensagemUsuario(text);
+    } else {
+        processarMensagensUsuario(text);
+    }
 }
 
+
 // Controla o fluxo de perguntas
+// Fluxo do Cartão
 function processarMensagemUsuario(texto) {
     if (etapa === 0) {
-        if(texto.toLowerCase().includes("cartão")) {
+        if (texto.toLowerCase().includes("cartão")) {
             addBotMessage("Claro, vamos fazer o seu cartão! Posso começar as perguntas?");
             etapa = 1;
         } else {
@@ -94,18 +101,67 @@ function processarMensagemUsuario(texto) {
         etapa = 0;
         dadosCartao = {};
     }
+
+    if (etapa < 0 || etapa > 5) {
+        addBotMessage("Desculpe, não entendi. Pode repetir, por favor?");
+    }
+}
+// Fluxo de respostas mais simples..., até o momento
+const prespostas = {
+    "oi": "Oi, Que bom te ver por aqui, Como posso ajudá-lo(a) 😊",
+    "olá": "Olá, tudo bem? Como eu posso ajudar você?",
+    "oi, tudo bem?": "Oi, tudo sim! Como posso te ajudar hoje?",
+    "olá, tudo bem?": "Oi, tudo sim! Como posso te ajudar hoje?",
+    "tudo bem?": "Oi, tudo sim! Como posso te ajudar hoje?",
+    "queria tirar uma dúvida": "Claro, pode falar a sua dúvida. Sobre o que seria?",
+    "você pode me ajudar": "Claro que posso! Sobre o que seria a sua dúvida",
+    "como funciona aqui?": "O Pink Cloud BubCófe é uma cafeteria encantadora de Ribeirão Preto. Criamos este espaço digital para que clientes — antigos e novos — possam conhecer nossos produtos, serviços, localização e muito mais! Para explorar tudo, basta clicar nos atalhos acima. Eles vão te levar para as próximas páginas, onde você pode se aventurar pelo nosso universo doce e aconchegante. Se ainda estiver com dúvidas ou não souber por onde começar, é só digitar um '.' e o Queridinho Milton vai te ajudar!",
+    ".": "Olá, caso a sua dúvida seja os atalhos, são os que estão aqui em cima do lado da logo da nossa cafeteria, basta clicar em algum deles, e você estará em outra página para que possa desfrutar e aproveitar do nosso sistema. Caso sua dúvida seja outra, mande um '/' para que eu possa ajudá-lo com outras dicas surpreendentes",
+    "/": "Se a sua dúvida não são os atalhos, poderia me dizer qual é para que eu possa ajudá-lo(a)?",
+    "não sei o que fazer?": "Sem problemas, estou aqui pra isso! Qual a sua dúvida!",
+    "não sei onde clicar": "Sem problemas! Os atalhos principais estão na parte superior da tela, perto da nossa logo. Eles vão te levar para páginas como cardápio, contato, localização e muito mais!",
+    "não sei aonde clicar": "Sem problemas! Os atalhos principais estão na parte superior da tela, perto da nossa logo. Eles vão te levar para páginas como cardápio, contato, localização e muito mais!",
+    "não estou achando nada": "Entendo! Que tal começar pelos atalhos lá em cima da página? Se preferir, me diga o que está procurando e eu te guio!",
+    "como vejo o cardápio?": "Basta clicar no atalho 'Produtos' lá no topo da página.",
+    "cardápio?": "Basta clicar no atalho 'Produtos' lá no topo da página.",
+    "cardápio": "Basta clicar no atalho 'Produtos' lá no topo da página.",
+    "quero voltar pro começo": "Claro! O atalho que leva a página geral é a 'Principal', ela é o primeiro atalho nas outras páginas para que você possa se localizar.",
+    "quero voltar pro início": "Claro! O atalho que leva a página geral é a 'Principal', ela é o primeiro atalho nas outras páginas para que você possa se localizar.",
+    "o que vocês vendem?": "Nós oferecemos uma variedade de delícias de bebidas especiais e artesanais! Clique no cardápio para ver tudo 😋",
+    "vocês têm café?": "Com certeza! Temos uma seleção deliciosa de cafés quentinhos e especiais. Você pode ver no nosso cardápio ☕",
+    "tem opções veganas?": "Sim! Temos algumas opções pensadas com carinho para o público vegano. Dê uma olhadinha no nosso cardápio!",
+};
+
+function processarMensagensUsuario(texto) {
+    const chave = texto.toLowerCase();
+    let encontroupresposta = false;
+
+    for (const pergunta in prespostas) {
+        if (chave.includes(pergunta)) {
+            addBotMessage(prespostas[pergunta]);
+            encontroupresposta = true;
+            break;
+        }
+    }
+
+    if (!encontroupresposta) {
+        addBotMessage("Desculpe, não entendi. Pode repetir, por favor?");
+    }
 }
 
+// Função para adicionar mensagem do usuário
 function addUserMessage(text) {
-  const msg = document.createElement('div');
-  msg.className = 'user-message';
-  msg.textContent = text;
-  chatMessages.appendChild(msg);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+    const msg = document.createElement('div');
+    msg.className = 'user-message';
+    msg.textContent = text;
+    chatMessages.appendChild(msg);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 }
 
+// Evento de click do botão
 chatSendBtn.addEventListener('click', sendMessage);
 
+// Evento para quando o usuário pressionar o botão de enter, enviar a mensagem
 chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         sendMessage();

@@ -345,7 +345,7 @@ body {
     border-radius: 90px;
 }
 
-  #chat-toggle {
+#chat-toggle {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -360,10 +360,10 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
+}
 
-  /* Janela do chat (inicialmente escondida) */
-  #chat-window {
+/* Janela do chat (inicialmente escondida) */
+#chat-window {
     position: fixed;
     bottom: 120px;
     right: 20px;
@@ -371,15 +371,15 @@ body {
     height: 500px;
     background: rgb(253, 204, 243);
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
     overflow: hidden;
     z-index: 1000;
-  }
+}
 
-  /* Área das mensagens */
-  #chat-messages {
+/* Área das mensagens */
+#chat-messages {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
@@ -387,19 +387,19 @@ body {
     font-weight: 300;
     font-size: 16.5px;
     border-radius: 10px
-  }
+}
 
-  /* Mensagens do bot */
-  .bot-message {
+/* Mensagens do bot */
+.bot-message {
     background: #d4f1ff;
     padding: 10px 12px;
     border-radius: 15px;
     margin: 10px;
     max-width: 80%;
-  }
+}
 
-  /* Mensagens do usuário */
-  .user-message {
+/* Mensagens do usuário */
+.user-message {
     background: #2b9af5;
     color: white;
     padding: 8px 12px;
@@ -407,23 +407,23 @@ body {
     margin: 10px;
     max-width: 80%;
     align-self: flex-end;
-  }
+}
 
-  /* Campo para enviar texto */
-  #chat-input-container {
+/* Campo para enviar texto */
+#chat-input-container {
     border-top: 1px solid #ccc;
     padding: 8px;
     display: flex;
-  }
+}
 
-  #chat-input {
+#chat-input {
     flex: 1;
     padding: 8px;
     font-size: 16.5px;
     border-radius: 5px;
-  }
+}
 
-  #chat-send-btn {
+#chat-send-btn {
     background: #f846ef;
     color: white;
     border: none;
@@ -431,7 +431,7 @@ body {
     margin-left: 5px;
     cursor: pointer;
     font-size: 16px;
-  }
+}
 
 /* Responsividade */
 
@@ -777,4 +777,3 @@ body {
         width: 200px;
     }
 }
-
