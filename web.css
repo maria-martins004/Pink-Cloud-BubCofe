@@ -435,6 +435,12 @@ body {
 
 /* Responsividade */
 
+@media (min-width: 1902px) {
+.nuvem_rosa {
+    background-image: url('./img_nuvem/nuvem_rosa_maior.png');
+}
+}
+
 @media (min-width: 1322px) and (max-width: 1400px) {
     .nuvem_rosa {
         background-image: url('./img_nuvem/nuvem_rosa_2.png');
